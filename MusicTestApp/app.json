@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Music",
-    "slug": "Music",
+    "name": "MusicTestApp",
+    "slug": "MusicTestApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
