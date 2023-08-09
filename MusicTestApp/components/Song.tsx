@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SongScreen = () => {
     const [isPlaying, setIsPlaying] = useState(false);
-    const songProgress = 0.5; // Ejemplo: progreso del 50%
+    const songProgress = 0.4; 
 
     return (
         <View style={styles.container}>
@@ -23,7 +23,6 @@ const SongScreen = () => {
             <View style={styles.buttonsContainer}>
                 <TouchableOpacity
                             style={styles.iconButton}
-                    onPress={() => console.log("Back pressed")}
                 >
                     <Icon name="backward" size={30} color="black" />
                 </TouchableOpacity>
@@ -39,7 +38,6 @@ const SongScreen = () => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.iconButton}
-                    onPress={() => console.log("Next pressed")}
                 >
                     <Icon name="forward" size={30} color="black" />
                 </TouchableOpacity>
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
         margin:20
     },
     playPauseButton: {
-        margin:15
+        margin:10
     },
     
 });
