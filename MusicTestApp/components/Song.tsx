@@ -53,6 +53,8 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         alignItems: 'center',
+        backgroundColor: 'white',
+        borderRadius: 30
     },
     albumCover: {
         width: 300,
