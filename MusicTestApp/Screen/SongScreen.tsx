@@ -1,26 +1,34 @@
 import React from 'react';
-import { StatusBar, View, StyleSheet } from 'react-native';
+import { StatusBar, View, StyleSheet, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Song from '../components/SongScreen/Song';
 import Navbar from '../components/SongScreen/statusBar';
 import AlbunImage from '../components/SongScreen/Albun';
 
 export default function SongScreen() {
-  const navigation = useNavigation(); 
+  const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <Navbar />
-      <View style={styles.songContainer}>
-        <View style={styles.songContent}>
-          <Song />
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined} 
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : StatusBar.currentHeight} 
+    >
+      <ScrollView
+        contentContainerStyle={styles.scrollViewContent}
+        keyboardShouldPersistTaps="handled"
+      >
+        <Navbar />
+        <View style={styles.songContainer}>
+          <View style={styles.songContent}>
+            <Song />
+          </View>
+          <View style={styles.albumImageContainer}>
+            <AlbunImage />
+          </View>
         </View>
-        <View style={styles.albumImageContainer}>
-          <AlbunImage />
-        </View>
-      </View>
-      <StatusBar />
-    </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -29,6 +37,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#442e4d',
     alignItems: 'center',
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    justifyContent: 'space-between',
   },
   songContainer: {
     flex: 1,
