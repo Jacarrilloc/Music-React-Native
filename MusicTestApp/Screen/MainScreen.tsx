@@ -18,9 +18,6 @@ export default function Screen1() {
       <View style={styles.buttonContainer}>
         <Button title="Pantalla 1" onPress={goToSongScreen} />
       </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Pantalla 2" onPress={goToListScreen}/>
-      </View>
     </View>
   );
 }
