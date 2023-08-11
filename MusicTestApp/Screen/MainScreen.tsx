@@ -9,10 +9,6 @@ export default function Screen1() {
     navigation.navigate('SongScreen');
   };
 
-  const goToListScreen = () => {
-    navigation.navigate('ListScreen');
-  };
-
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>

@@ -7,6 +7,7 @@ const SongScreen = () => {
     const songProgress = 0.2;
 
     return (
+        
         <View style={styles.container}>
             <View style={styles.contentContainer}>
                 <Text style={styles.songName}>Song Name</Text>
