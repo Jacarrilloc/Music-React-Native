@@ -9,9 +9,15 @@ export default function Screen1() {
     navigation.navigate('SongScreen');
   };
 
+  const goToListScreen = () => {
+    navigation.navigate('ListScreen');
+  };
+
   return (
     <View style={styles.container}>
-      <Button title="Pantalla 1" onPress={goToSongScreen} />
+      <View style={styles.buttonContainer}>
+        <Button title="Pantalla 1" onPress={goToSongScreen} />
+      </View>
     </View>
   );
 }
@@ -22,5 +28,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 10
   },
+  buttonContainer:{
+    margin:10
+  }
 });
